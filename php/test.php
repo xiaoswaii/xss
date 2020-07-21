@@ -1,4 +1,4 @@
 <?php
-$shit = getenv['PASSWORD'];
+$shit = getenv('PASSWORD');
 echo $shit;
 ?>
