@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phising Website</title>
+</head>
+<body>
+    <button onclick="spoofing()">ADDRESS SPOOFING</button>
+</body>
+</html>
+<script>
+    function spoofing(){
+        document.write("<h1>這不是蘋果網站</h1>");
+        location.href = "https://apple.com:8081";
+        setInterval(function(){location.href="https://apple.com:8080"},2000);
+    }
+</script>
