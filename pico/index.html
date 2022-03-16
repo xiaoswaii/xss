@@ -1,7 +1,7 @@
 <script>
 const myWindow = window.open("https://google.com", "", "width=300,height=300");
 // const myWindow = window.open("http://localhost:4000", "", "width=300,height=300");
-console.log(myWindows.opener.localStorage);
+console.log(myWindow.opener.localStorage);
 
 var myHeaders = new Headers(); // Currently empty
 myHeaders.append('Origin', 'http://localhost:4000');
