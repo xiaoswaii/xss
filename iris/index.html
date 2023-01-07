@@ -33,7 +33,7 @@
             'Access-Control-Allow-Origin': '*'
             },
             success:function(res){console.log(res)},
-            error:function(err){console.log(err)},
+            error:function(err){console.log(err.getAllResponseHeaders)},
             });
             // $('#my_frame').on( 'load', function() {
             //     var answer = $("#my_frame").contents();
